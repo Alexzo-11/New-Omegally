@@ -1,10 +1,9 @@
-const User = require('../models/User');
+const User = require('../models/Users');
 const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
-const { jwtSecret, jwtExpiresIn, jwtRefreshSecret, jwtRefreshExpiresIn } = require('../config/env');
 
-const signToken = (id, role) => jwt.sign({ id, role }, jwtSecret, { expiresIn: jwtExpiresIn });
-const signRefreshToken = (id) => jwt.sign({ id }, jwtRefreshSecret, { expiresIn: jwtRefreshExpiresIn });
+const signToken = (id, role) => jwt.sign({ id, role }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN });
+const signRefreshToken = (id) => jwt.sign({ id }, process.env.JWT_REFRESH_SECRET, { expiresIn: process.env.JWT_REFRESH_EXPIRES_IN });
 
 exports.register = async (req, res, next) => {
   try {
@@ -58,7 +57,7 @@ exports.refresh = async (req, res, next) => {
     const { refreshToken } = req.body;
     if (!refreshToken) return res.status(400).json({ message: 'Refresh token required' });
 
-    const decoded = await promisify(jwt.verify)(refreshToken, jwtRefreshSecret);
+    const decoded = await promisify(jwt.verify)(refreshToken, process.env.JWT_REFRESH_SECRET);
     const user = await User.findById(decoded.id);
     if (!user) return res.status(401).json({ message: 'User not found' });
 

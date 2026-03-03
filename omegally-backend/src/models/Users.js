@@ -15,16 +15,15 @@ const userSchema = new mongoose.Schema(
       country: String,
     },
     role: { type: String, enum: ['customer', 'admin'], default: 'customer' },
-  },
-  cart: [
+    cart: [
       {
         productId: { type: mongoose.Schema.Types.ObjectId, ref: 'Product' },
         quantity: { type: Number, min: 1 },
         addedAt: { type: Date, default: Date.now },
       },
     ],
+  },
   { timestamps: true }
-
 );
 
 userSchema.pre('save', async function (next) {

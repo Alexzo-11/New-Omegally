@@ -2,7 +2,6 @@ const Payment = require('../models/Payment');
 const Order = require('../models/Order');
 const paypal = require('../utils/paypal');
 const axios = require('axios');
-const paypal = require('../utils/paypal');
 
 exports.processPayment = async (req, res, next) => {
   try {
