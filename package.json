@@ -1,7 +1,39 @@
 {
+  "name": "omegally-monorepo",
+  "version": "1.0.0",
+  "description": "Omegally E-commerce Platform - Full-stack application with React frontend and Node.js backend",
+  "private": true,
+  "scripts": {
+    "setup": "npm run setup:backend && npm run setup:frontend",
+    "setup:backend": "cd omegally-backend && npm install",
+    "setup:frontend": "cd omegally && npm install",
+    "dev:backend": "cd omegally-backend && npm start",
+    "dev:frontend": "cd omegally && npm start",
+    "dev": "echo \"Please run backend and frontend in separate terminals:\" && echo \"npm run dev:backend\" && echo \"npm run dev:frontend\"",
+    "build:frontend": "cd omegally && npm run build",
+    "test:backend": "cd omegally-backend && npm test",
+    "test:frontend": "cd omegally && npm test"
+  },
+  "keywords": [
+    "ecommerce",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb",
+    "fullstack"
+  ],
+  "author": "Alexzo-11",
+  "license": "ISC",
+  "workspaces": [
+    "omegally",
+    "omegally-backend"
+  ],
   "dependencies": {
     "axios": "^1.13.6",
     "express": "^5.2.1",
     "serverless-http": "^4.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
