@@ -1,4 +1,3 @@
-import apiClient, { setAuthTokens, clearAuthTokens } from '../api/client';
 const express = require('express');
 const authController = require('../controllers/authController');
 const { protect } = require('../middleware/authMiddleware');

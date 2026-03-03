@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/Users');
 const Product = require('../models/Product');
 
 // Get user's cart
