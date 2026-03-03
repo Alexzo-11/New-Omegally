@@ -1,0 +1,80 @@
+.pageTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.filters {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .filters {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+body.dark-mode .filters {
+  background-color: var(--color-gray-800);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.filterInput,
+.filterSelect {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius);
+  background-color: white;
+}
+
+body.dark-mode .filterInput,
+body.dark-mode .filterSelect {
+  background-color: var(--color-gray-700);
+  border-color: var(--color-gray-600);
+  color: white;
+}
+
+.rangeInput {
+  width: 100%;
+}
+
+.noProducts {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--color-gray-500);
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .productGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

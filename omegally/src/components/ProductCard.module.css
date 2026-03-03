@@ -1,0 +1,158 @@
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+body.dark-mode .card {
+  background-color: var(--color-gray-800);
+}
+
+.imageLink {
+  display: block;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 1.25rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.nameLink {
+  text-decoration: none;
+}
+
+.name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+body.dark-mode .name {
+  color: white;
+}
+
+.category {
+  color: var(--color-gray-600);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+}
+
+body.dark-mode .category {
+  color: var(--color-gray-300);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+body.dark-mode .price {
+  color: #a78bfa;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.iconButton:hover {
+  background-color: var(--color-gray-200);
+}
+
+body.dark-mode .iconButton {
+  color: var(--color-gray-200);
+}
+
+body.dark-mode .iconButton:hover {
+  background-color: var(--color-gray-700);
+}
+
+/* Modal styles */
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modalImage {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.modalDescription {
+  color: var(--color-gray-700);
+  line-height: 1.6;
+}
+
+body.dark-mode .modalDescription {
+  color: var(--color-gray-300);
+}
+
+.modalPrice {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.modalActions a {
+  text-decoration: none;
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "price": 199.99,
+    "category": "audio",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300",
+    "description": "Premium noise-cancelling wireless headphones with 30h battery."
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "price": 299.99,
+    "category": "wearables",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300",
+    "description": "Track your fitness and stay connected with this sleek smartwatch."
+  },
+  {
+    "id": 3,
+    "name": "Portable Speaker",
+    "price": 89.99,
+    "category": "audio",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300",
+    "description": "Waterproof Bluetooth speaker with deep bass and 12h playtime."
+  },
+  {
+    "id": 4,
+    "name": "Laptop Backpack",
+    "price": 49.99,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300",
+    "description": "Durable, water-resistant backpack with USB charging port."
+  },
+  {
+    "id": 5,
+    "name": "4K Action Camera",
+    "price": 249.99,
+    "category": "cameras",
+    "image": "https://images.unsplash.com/photo-1526948128573-7035e7e2e9e3?w=300",
+    "description": "Capture every adventure in stunning 4K with image stabilization."
+  },
+  {
+    "id": 6,
+    "name": "Fitness Tracker",
+    "price": 79.99,
+    "category": "wearables",
+    "image": "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?w=300",
+    "description": "Monitor heart rate, steps, and sleep quality with this lightweight band."
+  }
+]

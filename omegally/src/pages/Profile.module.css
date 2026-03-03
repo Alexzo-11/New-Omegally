@@ -1,0 +1,352 @@
+.profilePage {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .profilePage {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Profile Card (existing styles enhanced) */
+.profileCard {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  height: fit-content;
+}
+
+body.dark-mode .profileCard {
+  background-color: var(--color-surface-dark);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.infoGroup {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: var(--color-gray-100);
+  border-radius: var(--border-radius);
+}
+
+body.dark-mode .infoGroup {
+  background-color: var(--color-gray-800);
+}
+
+.infoGroup label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-gray-600);
+  margin-bottom: 0.25rem;
+}
+
+body.dark-mode .infoGroup label {
+  color: var(--color-gray-400);
+}
+
+.infoGroup p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+body.dark-mode .infoGroup p {
+  color: var(--color-text-dark);
+}
+
+.logoutButton {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Orders Section */
+.ordersSection {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+body.dark-mode .ordersSection {
+  background-color: var(--color-surface-dark);
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-light);
+}
+
+body.dark-mode .sectionTitle {
+  color: var(--color-text-dark);
+}
+
+.noOrders {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--color-gray-500);
+}
+
+.ordersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.orderCard {
+  border: 1px solid var(--color-gray-200);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+body.dark-mode .orderCard {
+  border-color: var(--color-gray-700);
+}
+
+.orderCard:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-gray-50);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+body.dark-mode .orderHeader {
+  background-color: var(--color-gray-800);
+}
+
+.orderHeader:hover {
+  background-color: var(--color-gray-100);
+}
+
+body.dark-mode .orderHeader:hover {
+  background-color: var(--color-gray-700);
+}
+
+.orderSummary {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.orderId {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.orderDate {
+  color: var(--color-gray-600);
+}
+
+.orderTotal {
+  font-weight: 600;
+}
+
+.orderStatus {
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.statusDelivered {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.statusShipped {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.statusProcessing {
+  background-color: #fed7aa;
+  color: #92400e;
+}
+
+body.dark-mode .statusDelivered {
+  background-color: #064e3b;
+  color: #d1fae5;
+}
+
+body.dark-mode .statusShipped {
+  background-color: #1e3a8a;
+  color: #dbeafe;
+}
+
+body.dark-mode .statusProcessing {
+  background-color: #92400e;
+  color: #fed7aa;
+}
+
+.expandIcon {
+  font-size: 1.2rem;
+  color: var(--color-gray-500);
+}
+
+.orderDetails {
+  padding: 1.5rem;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+body.dark-mode .orderDetails {
+  border-top-color: var(--color-gray-700);
+}
+
+.orderDetails h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  color: var(--color-gray-700);
+}
+
+body.dark-mode .orderDetails h4 {
+  color: var(--color-gray-300);
+}
+
+.orderDetails h4:first-child {
+  margin-top: 0;
+}
+
+.itemsList {
+  background-color: var(--color-gray-100);
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+}
+
+body.dark-mode .itemsList {
+  background-color: var(--color-gray-800);
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  border-bottom: 1px dashed var(--color-gray-300);
+}
+
+.itemRow:last-child {
+  border-bottom: none;
+}
+
+body.dark-mode .itemRow {
+  border-bottom-color: var(--color-gray-700);
+}
+
+.paymentInfo {
+  background-color: var(--color-gray-100);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+body.dark-mode .paymentInfo {
+  background-color: var(--color-gray-800);
+}
+
+.planSummary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.progressBar {
+  width: 100%;
+  height: 0.75rem;
+  background-color: var(--color-gray-300);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+body.dark-mode .progressBar {
+  background-color: var(--color-gray-600);
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border-radius: 1rem;
+  transition: width 0.3s;
+}
+
+.progressText {
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+  text-align: right;
+}
+
+body.dark-mode .progressText {
+  color: var(--color-gray-400);
+}
+
+.deliveryInfo {
+  background-color: var(--color-gray-100);
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  font-size: 0.95rem;
+}
+
+body.dark-mode .deliveryInfo {
+  background-color: var(--color-gray-800);
+}
+
+.deliveryInfo p {
+  margin: 0.25rem 0;
+}
+
+/* Not logged in */
+.notLoggedIn {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.notLoggedIn h2 {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-light);
+}
+
+body.dark-mode .notLoggedIn h2 {
+  color: var(--color-text-dark);
+}

@@ -1,0 +1,23 @@
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/omegally
+JWT_SECRET=your_jwt_secret_key_change_this
+JWT_EXPIRES_IN=15m
+JWT_REFRESH_SECRET=your_refresh_secret_change_this
+JWT_REFRESH_EXPIRES_IN=7d
+REACT_APP_API_URL=http://localhost:5000/api
+
+# PayPal
+PAYPAL_CLIENT_ID=your_paypal_client_id
+PAYPAL_CLIENT_SECRET=your_paypal_client_secret
+PAYPAL_MODE=sandbox  # or live
+
+# Flutterwave
+FLUTTERWAVE_PUBLIC_KEY=your_flutterwave_public_key
+FLUTTERWAVE_SECRET_KEY=your_flutterwave_secret_key
+FLUTTERWAVE_ENCRYPTION_KEY=your_flutterwave_encryption_key
+FLUTTERWAVE_MODE=sandbox  # or live
+
+PAYPAL_CLIENT_ID=your_sandbox_client_id
+PAYPAL_CLIENT_SECRET=your_sandbox_secret
+PAYPAL_MODE=sandbox
+FRONTEND_URL=http://localhost:3000
